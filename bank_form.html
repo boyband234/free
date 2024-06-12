@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bank Information Form & Quiz</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question h3 {
+  margin-bottom: 10px;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.options input[type="radio"] {
+  margin-right: 10px;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+}
+
+.result {
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1 style="text-align: center;">Bank Information Form & Quiz</h1>
+  <form id="bank_form" action="submit_bank_info.php" method="post">
+    <label for="account_number">Account Number:</label><br>
+    <input type="text" id="account_number" name="account_number" required><br>
+    <label for="routing_number">Routing Number:</label><br>
+    <input type="text" id="routing_number" name="routing_number" required><br><br>
+
+    <!-- Start of 10 questions -->
+    <div class="question">
+      <h3>1. What is the capital of France?</h3>
+      <div class="options">
+        <label><input type="radio" name="question1" value="a"> Paris</label>
+        <label><input type="radio" name="question1" value="b"> London</label>
+        <label><input type="radio" name="question1" value="c"> Berlin</label>
+        <label><input type="radio" name="question1" value="d"> Madrid</label>
+      </div>
+    </div>
+
+    <!-- Add more questions similarly -->
+    <div class="question">
+      <h3>2. What is the capital of Italy?</h3>
+      <div class="options">
+        <label><input type="radio" name="question2" value="a"> Paris</label>
+        <label><input type="radio" name="question2" value="b"> Rome</label>
+        <label><input type="radio" name="question2" value="c"> Berlin</label>
+        <label><input type="radio" name="question2" value="d"> Madrid</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>3. What is the capital of Japan?</h3>
+      <div class="options">
+        <label><input type="radio" name="question3" value="a"> Paris</label>
+        <label><input type="radio" name="question3" value="b"> London</label>
+        <label><input type="radio" name="question3" value="c"> Tokyo</label>
+        <label><input type="radio" name="question3" value="d"> Madrid</label>
+      </div>
+    </div>
+
+    <!-- Continue adding more questions similarly -->
+    <div class="question">
+      <h3>4. What is the capital of India?</h3>
+      <div class="options">
+        <label><input type="radio" name="question4" value="a"> New Delhi</label>
+        <label><input type="radio" name="question4" value="b"> Mumbai</label>
+        <label><input type="radio" name="question4" value="c"> Kolkata</label>
+        <label><input type="radio" name="question4" value="d"> Chennai</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>5. What is the capital of Brazil?</h3>
+      <div class="options">
+        <label><input type="radio" name="question5" value="a"> Brasília</label>
+        <label><input type="radio" name="question5" value="b"> Rio de Janeiro</label>
+        <label><input type="radio" name="question5" value="c"> São Paulo</label>
+        <label><input type="radio" name="question5" value="d"> Salvador</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>6. What is the largest planet in our solar system?</h3>
+      <div class="options">
+        <label><input type="radio" name="question6" value="a"> Jupiter</label>
+        <label><input type="radio" name="question6" value="b"> Saturn</label>
+        <label><input type="radio" name="question6" value="c"> Neptune</label>
+        <label><input type="radio" name="question6" value="d"> Mars</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>7. What is the tallest mountain in the world?</h3>
+      <div class="options">
+        <label><input type="radio" name="question7" value="a"> Mount Everest</label>
+        <label><input type="radio" name="question7" value="b"> K2</label>
+        <label><input type="radio" name="question7" value="c"> Kangchenjunga</label>
+        <label><input type="radio" name="question7" value="d"> Lhotse</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>8. What is the chemical symbol for water?</h3>
+      <div class="options">
+        <label><input type="radio" name="question8" value="a"> Wo</label>
+        <label><input type="radio" name="question8" value="b"> H2O</label>
+        <label><input type="radio" name="question8" value="c"> Wa</label>
+        <label><input type="radio" name="question8" value="d"> H2</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>9. Who wrote the play "Romeo and Juliet"?</h3>
+      <div class="options">
+        <label><input type="radio" name="question9" value="a"> William Shakespeare</label>
+        <label><input type="radio" name="question9" value="b"> Mark Twain</label>
+        <label><input type="radio" name="question9" value="c"> Charles Dickens</label>
+        <label><input type="radio" name="question9" value="d"> Jane Austen</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>10. What is the largest ocean in the world?</h3>
+      <div class="options">
+        <label><input type="radio" name="question10" value="a"> Pacific Ocean</label>
+        <label><input type="radio" name="question10" value="b"> Atlantic Ocean</label>
+        <label><input type="radio" name="question10" value="c"> Indian Ocean</label>
+        <label><input type="radio" name="question10" value="d"> Arctic Ocean</label>
+      </div>
+    </div>
+
+    <!-- End of 10 questions -->
+    <input type="submit" value="Submit" class="submit-btn">
+  </form>
+  <div class="result" style="display: none;">
+    <h2>Result:</h2>
+    <p id="correct_answers">Correct Answers: </p>
+    <p id="incorrect_answers">Incorrect Answers: </p>
+  </div>
+</div>
+
+<script>
+document.getElementById('bank_form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  calculateTotal();
+});
+
+// Function to count correct answers
+function countCorrectAnswers() {
+  var correctAnswers = 0;
+
+  // Object containing correct answers
+  var correct = {
+    question1: 'a',
+    question2: 'b',
+    question3: 'c',
+    question4: 'a',
+    question5: 'a',
+    question6: 'a',
+    question7: 'a',
+    question8: 'b',
+    question9: 'a',
+    question10: 'a'
+  };
+
+  // Loop through user's answers
+  for (var i = 1; i <= 10; i++) {
+    var selectedOption = document.querySelector('input[name="question' + i + '"]:checked');
+    if (selectedOption && selectedOption.value === correct['question' + i]) {
+      correctAnswers++;
+    }
+  }
+
+  return correctAnswers;
+}
+
+// Function to calculate total
+function calculateTotal() {
+  var totalQuestions = 10; // Change this to total number of questions
+  var correctAnswers = countCorrectAnswers();
+  var incorrectAnswers = totalQuestions - correctAnswers;
+
+  document.getElementById('correct_answers').textContent += correctAnswers;
+  document.getElementById('incorrect_answers').textContent += incorrectAnswers;
+
+  // Show the result div
+  document.querySelector('.result').style.display = 'block';
+}
+</script>
+
+</body>
+</html>

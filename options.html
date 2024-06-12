@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Options</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .options-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .options {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: slide-up 0.5s ease;
+    }
+
+    @keyframes slide-up {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .options h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333333;
+    }
+
+    .options-btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .options-btn:hover {
+      background-color: #0056b3;
+      box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="options-container">
+    <div class="options">
+      <h2>Choose Your Plan</h2>
+      <button class="options-btn" onclick="showMessage('premium')">Premium</button>
+      <button class="options-btn" onclick="redirectToBankForm()">Member</button>
+    </div>
+
+    <div class="message" id="message" style="display: none;">
+      <p>Soal belum ada, silakan membeli dulu...</p>
+      <button class="options-btn" onclick="showOptions()">Kembali ke Pilihan</button>
+    </div>
+  </div>
+
+  <script>
+    function showMessage(plan) {
+      if (plan === 'premium') {
+        document.querySelector('.options').style.display = 'none';
+        document.getElementById('message').style.display = 'block';
+      }
+    }
+
+    function showOptions() {
+      document.querySelector('.options').style.display = 'block';
+      document.getElementById('message').style.display = 'none';
+    }
+
+    function redirectToBankForm() {
+      showMessage('premium'); // Menampilkan pesan saat tombol "Member" ditekan
+      window.location.href = "bank_form.html";
+    }
+  </script>
+</body>
+</html>
